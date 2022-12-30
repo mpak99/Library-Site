@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<style>
+  table, th , td  {
+    border:1px solid rgb(0, 3, 180);
+    margin: 50px;
+   text-align: center;
+  }
+  </style>
+
+<table style="width:60%">
+  
+    <tr>
+      <th>ISBN</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Pages</th>
+    </tr>
+    {%for book in allbooks %}
+    <tr>
+      <td>{{book[0]}}</td>
+      <td>{{book[1]}}</td>
+      <td>{{book[2]}}</td>
+      <td>{{book[3]}}</td>
+      <td>{{book[4]}}</td>
+    </tr>
+    {% endfor %}
+  </table> 
+  <a href="/deletebook" class="btn-primary" style="margin: 50px;">Delete book</a>
+{% endblock %}

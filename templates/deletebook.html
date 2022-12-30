@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="container signup-section">
+    <div class="section-content">
+      <h2>Delete a book </h2>
+
+      <form method="POST">
+
+        <div class="form-group">
+          <label>ISBN:</label>
+          <input type=text name=ISBN placeholder="ISBN" />
+        </div>        
+          <input type="submit" value="Delete book" class="btn-primary"/>
+
+        
+      </form>
+    </div>
+  </main>
+{% endblock %}
